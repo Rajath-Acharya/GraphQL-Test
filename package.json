@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +14,11 @@
   "repository": "git@github.com:Rajath-Acharya/graphQL-test.git",
   "dependencies": {
     "apollo-server": "^3.5.0",
-    "graphql": "^16.0.1",
-    "typescript": "^4.4.4"
+    "graphql": "^16.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4",
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12"
   }
 }
